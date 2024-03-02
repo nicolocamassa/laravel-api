@@ -45,7 +45,7 @@
                             </li>
 
                             <li class="fs-4 fw-bold mb-5 mt-5 d-flex align-items-center justify-content-center">
-                                <a href="{{ route('admin.projects.index') }}"
+                                <a href="{{ route('admin.projects.index', ['view' => 0]) }}"
                                 class="text-decoration-none {{ Route::currentRouteName() == 'admin.projects.index' ? 'active-sidebar' : 'text-secondary' }}">
 
                                     <div class="align-items-center d-flex  ">

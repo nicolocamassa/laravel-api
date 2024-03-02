@@ -40,6 +40,45 @@ header{
     }
 }
 
+table{
+    color: rgb(178, 178, 178);
+
+    thead{
+        border-bottom: 1px solid rgb(178, 178, 178);
+
+        th{
+            padding-bottom: 10px;
+        }
+
+    }
+    td{
+        padding: 10px;
+
+        .dropdown{
+            a{
+                background-color: rgb(11, 11, 11);
+                color: white;
+            }
+
+            .dropdown-menu{
+                background-color: rgb(11, 11, 11);
+            }
+
+            button{
+                background-color: transparent;
+                border: none;
+                width: 100%;
+
+                &:hover{
+                    background-color: white;
+                }
+            }
+        }
+    }
+}
+
+
+
 .non-selected-view{
     width: 50%;
     height: 32px;

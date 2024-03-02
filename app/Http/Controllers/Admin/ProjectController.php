@@ -9,6 +9,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Technology;
 use App\Models\Type;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
+
+
 
 
 
@@ -20,11 +23,24 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $projects = Project::all();
 
-        return view('admin.projects.index', compact('projects'));
+        $data = $request->all();
+    
+        if ($request->has('view')) {
+            $view = $data['view'];
+        } else {
+            $view = 0; 
+        }
+    
+        $projects = Project::all();
+    
+        if ($view == 0) {
+            return view('admin.projects.index', compact('projects'));
+        } else {
+            return view('admin.projects.index_table', compact('projects'));
+        }
     }
 
     /**
