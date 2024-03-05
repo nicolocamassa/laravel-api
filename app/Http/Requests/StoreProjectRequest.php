@@ -26,7 +26,6 @@ class StoreProjectRequest extends FormRequest
         return [
             'title'           => 'required|max:30|min:5',
 		    'description'     => 'required',
-		    'image'           => 'max:500',
 		    'date'            => 'required',
 		    'languages'       => 'required',
 		    'status'          => 'required'
@@ -40,7 +39,6 @@ class StoreProjectRequest extends FormRequest
             'title.max' => 'You can enter a maximum of 30 characters',
             'title.min' => 'You can enter a minimum of 5 characters',
             'description.required' => 'The description is mandatory',
-            'image.max' => 'You can enter a maximum of 500 characters',
             'date.required' => 'The date is mandatory',
             'languages.required' => 'The language is mandatory',
             'status.required' => 'The status is mandatory',

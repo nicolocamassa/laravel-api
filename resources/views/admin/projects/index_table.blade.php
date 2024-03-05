@@ -34,8 +34,8 @@
                         <th scope="col">ID</th>
                         <th scope="col">Title</th>
                         <th scope="col">Description</th>
-                        <th scope="col">Languages</th>
-                        <th scope="col">Status</th>
+                        <th scope="col" class="d-none d-sm-table-cell">Languages</th>
+                        <th scope="col" class="d-none d-sm-table-cell">Status</th>
                         <th scope="col">Dash</th>
                       </tr>
                     </thead>
@@ -47,8 +47,8 @@
                         <td scope="row">{{ $project->id }}</th>
                         <td class="">{{ $project->title }}</td>
                         <td class="">{{ $project->description }}</td>
-                        <td class="">{{ $project->languages }}</td>
-                        <td class="">{{ $project->status }}</td>
+                        <td class="d-none d-sm-table-cell">{{ $project->languages }}</td>
+                        <td class="d-none d-sm-table-cell">{{ $project->status }}</td>
                         <td class="">
                             <div class="dropdown">
                                 <a class="btn text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

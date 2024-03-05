@@ -12,10 +12,6 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 
-
-
-
-
 class ProjectController extends Controller
 {
     /**
@@ -145,7 +141,6 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-
         if($project->image != null){
             Storage::disk('public')->delete($project->image);
         }
